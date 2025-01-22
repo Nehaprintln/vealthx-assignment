@@ -1,0 +1,153 @@
+/* Main form container */
+.claim-form {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Heading style */
+  .claim-form h2 {
+    font-size: 28px;
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  
+  /* Success message style */
+  .success {
+    text-align: center;
+    background-color: #2ecc71;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+  
+  /* Form group for input fields */
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  /* Label style */
+  .form-group label {
+    display: block;
+    font-size: 16px;
+    color: #34495e;
+    margin-bottom: 5px;
+  }
+  
+  /* Input, select, textarea styles */
+  input[type="text"],
+  input[type="email"],
+  input[type="number"],
+  input[type="date"],
+  textarea,
+  select {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #bdc3c7;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #2c3e50;
+    background-color: #ecf0f1;
+    box-sizing: border-box;
+    transition: border 0.3s ease;
+  }
+  
+  input[type="text"]:focus,
+  input[type="email"]:focus,
+  input[type="number"]:focus,
+  input[type="date"]:focus,
+  textarea:focus,
+  select:focus {
+    border-color: #3498db;
+    outline: none;
+  }
+  
+  /* Error message styling */
+  .error {
+    color: #e74c3c;
+    font-size: 14px;
+    margin-top: 5px;
+  }
+  
+  /* Button styles */
+  button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #3498db;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 20px;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #2980b9;
+    transform: scale(1.05);
+  }
+  
+  button[type="submit"]:disabled {
+    background-color: #bdc3c7;
+    cursor: not-allowed;
+  }
+  
+  /* Reset button style */
+  button[type="button"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #e74c3c;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  button[type="button"]:hover {
+    background-color: #c0392b;
+    transform: scale(1.05);
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .claim-form {
+      padding: 20px;
+    }
+  
+    .claim-form h2 {
+      font-size: 24px;
+    }
+  
+    .form-group label {
+      font-size: 14px;
+    }
+  
+    input[type="text"],
+    input[type="email"],
+    input[type="number"],
+    input[type="date"],
+    textarea,
+    select {
+      font-size: 14px;
+    }
+  
+    button[type="submit"],
+    button[type="button"] {
+      font-size: 14px;
+    }
+  }
+  

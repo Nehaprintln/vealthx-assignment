@@ -1,0 +1,80 @@
+/* Home.css */
+
+.home-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f4f7fc;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+  }
+  
+  .welcome-text {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+  }
+  
+  .choose-text {
+    font-size: 1.2rem;
+    color: #7f8c8d;
+    margin-bottom: 2rem;
+  }
+  
+  .buttons-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .home-button {
+    padding: 12px 24px;
+    font-size: 1rem;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 200px;
+  }
+  
+  .view-button {
+    background-color: #3498db;
+  }
+  
+  .claim-button {
+    background-color: #e74c3c;
+  }
+  
+  .home-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .home-button:focus {
+    outline: none;
+  }
+  
+  @media (max-width: 768px) {
+    .welcome-text {
+      font-size: 2rem;
+    }
+  
+    .choose-text {
+      font-size: 1rem;
+    }
+  
+    .buttons-container {
+      flex-direction: column;
+    }
+  
+    .home-button {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  }
+  

@@ -1,0 +1,99 @@
+/* ViewData.css */
+
+/* Main container */
+.view-data-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f9f9f9;
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Heading style */
+  .claims-heading {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  /* No claims message */
+  .no-claims {
+    font-size: 1.2rem;
+    color: #7f8c8d;
+  }
+  
+  /* Loading and error message */
+  .loading, .error-message {
+    font-size: 1.2rem;
+    color: #e74c3c;
+    text-align: center;
+  }
+  
+  /* Table style */
+  .claims-table {
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 20px;
+    border-collapse: collapse;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Table header */
+  .claims-table th {
+    background-color: #3498db;
+    color: #fff;
+    padding: 12px;
+    text-align: left;
+    font-size: 1.1rem;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+  
+  /* Table rows */
+  .claims-table td {
+    padding: 12px;
+    text-align: left;
+    font-size: 1rem;
+    border-bottom: 1px solid #ecf0f1;
+  }
+  
+  /* Hover effect for rows */
+  .claims-table tr:hover {
+    background-color: #f0f0f0;
+  }
+  
+  /* Table footer */
+  .claims-table td a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .claims-table td a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Responsive design for smaller screens */
+  @media (max-width: 768px) {
+    .claims-table th, .claims-table td {
+      font-size: 0.9rem;
+      padding: 8px;
+    }
+  
+    .claims-table {
+      width: 100%;
+      overflow-x: auto;
+    }
+  
+    .view-data-container {
+      padding: 10px;
+    }
+  
+    .claims-heading {
+      font-size: 2rem;
+    }
+  }
+  
