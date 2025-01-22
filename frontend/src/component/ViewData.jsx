@@ -64,7 +64,7 @@ export default function ViewData() {
                   <td>{claim.phone}</td>
                   <td>
                     {claim.filePath && (
-                      <a href={`http://localhost:5000/${claim.filePath}`} target="_blank" rel="noopener noreferrer" className="view-file-link">
+                      <a href={`https://vealthx-assignment.onrender.com/${claim.filePath}`} target="_blank" rel="noopener noreferrer" className="view-file-link">
                         View File
                       </a>
                     )}
