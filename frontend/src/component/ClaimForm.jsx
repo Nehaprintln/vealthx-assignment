@@ -8,6 +8,7 @@ export default function ClaimForm() {
         incidentDate: "",
         description: "",
         email: "",
+        alternameEmaile: "",
         phone: "",
         file: null,
       });
@@ -29,6 +30,8 @@ export default function ClaimForm() {
           tempErrors.description = "Description must be 20-500 characters.";
         if (!formData.email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email))
           tempErrors.email = "Invalid email format.";
+        if (!formData.alternameEmaile || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email))
+          tempErrors.alternameEmaile = "Invalid email format.";
         if (formData.phone && !/^\d{10,15}$/.test(formData.phone))
           tempErrors.phone = "Phone number must be 10-15 digits.";
         if (!formData.file)
@@ -57,10 +60,13 @@ export default function ClaimForm() {
         e.preventDefault();
         if (!validate()) return;
     
+        // convert formData to fetch() form data
+        // or either do => body: JSON.stringyfy(formData);
         const form = new FormData();
         Object.keys(formData).forEach((key) => {
           form.append(key, formData[key]);
         });
+        console.log("form with new fild", formData);
     
         try {
           const response = await fetch("https://vealthx-assignment.onrender.com/api/claims", {
@@ -77,6 +83,7 @@ export default function ClaimForm() {
               incidentDate: "",
               description: "",
               email: "",
+              alternameEmaile: "",
               phone: "",
               file: null,
             });
@@ -90,12 +97,13 @@ export default function ClaimForm() {
 
       const handleReset = ()=>{
         setFormData({
-            claimType: "",
+        claimType: "",
         policyNumber: "",
         claimAmount: "",
         incidentDate: "",
         description: "",
         email: "",
+        alternameEmaile:"",
         phone: "",
         file: null,
         })
@@ -167,6 +175,10 @@ export default function ClaimForm() {
               onChange={handleChange}
               placeholder="Enter your email"
             />
+            <label>alternate email</label>
+            <input type='email' name='alternameEmaile' value={formData.alternameEmaile}
+              onChange={handleChange}
+            placeholder='alternate email' />
             {errors.email && <span className="error">{errors.email}</span>}
           </div>
           <div className="form-group">

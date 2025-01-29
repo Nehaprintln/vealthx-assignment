@@ -7,6 +7,7 @@ const claimSchema = new mongoose.Schema({
   incidentDate: Date,
   description: String,
   email: String,
+  alternameEmaile: String,
   phone: String,
   filePath: String,
 });

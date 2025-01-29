@@ -5,6 +5,7 @@ export default function ViewData() {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
   
+    console.log(claims);
     useEffect(() => {
       const fetchClaims = async () => {
         try {
@@ -48,6 +49,7 @@ export default function ViewData() {
                 <th>Incident Date</th>
                 <th>Description</th>
                 <th>Email</th>
+                <th>AlternameEmaile</th>
                 <th>Phone</th>
                 <th>File</th>
               </tr>
@@ -61,10 +63,11 @@ export default function ViewData() {
                   <td>{new Date(claim.incidentDate).toLocaleDateString()}</td>
                   <td>{claim.description}</td>
                   <td>{claim.email}</td>
+                  <td>{claim.alternameEmaile}</td>
                   <td>{claim.phone}</td>
                   <td>
                     {claim.filePath && (
-                      <a href={`https://vealthx-assignment.onrender.com/${claim.filePath}`} target="_blank" rel="noopener noreferrer" className="view-file-link">
+                      <a href={`http://localhost:5000/${claim.filePath}`} target="_blank" rel="noopener noreferrer" className="view-file-link">
                         View File
                       </a>
                     )}
